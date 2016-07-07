@@ -1,4 +1,6 @@
 language: python
+git:
+  submodules: false
 install:
 - pip install pytest
 - pip install geojson
