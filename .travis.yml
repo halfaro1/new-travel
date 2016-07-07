@@ -6,13 +6,18 @@ install:
 - npm install -g geojson-merge
 before_script:
 - echo "about to deploy..." - geojson-merge *.topojson > newmap.topojson - rm class-pins.topojson
-  - mv newmap.topojson class-pins.topojson
+  - mv mv class-pins.topojson class-pins
+  - geojson-merge *.topojson class-pins > class-pins.topojson
+  - rm class-pins
+  - mv class-pins.topojson class-pins
+  - rm *.topojson
+  - mv class-pins class-pins.topojson
 script: py.test
 deploy:
   provider: releases
   api_key:
     secure: dqQDw96I6ZHfQyG+Cgz8QEj+YZNtk3E6l6ztwFtxEuujO+u1A2hlmHNjxAeJTCAqi9seKKwCnEHBojO2/TTB94QRh6Sr9w4v5zUMeA1uq7nfpeppo8y2Z3+hao7EPfw3D75sctnNXuTl6kIp79qAst3k4UpuPU6uH2qVHwAQoDKM9UT4Wte6NVEzgQTKuF/vycwdOyw3aYa8tV2ks/+o2HvqiWaajv3P6fhDUEIS7lrEGM3eOodG0Aos8uZqYyK/nEL/EyS0vMFOiHadqv/xT0Na2rnEwIw3Er9LoYe+EPv8Qv5vJRMQIl4Jz2i+lw20yvT1HFesiVwusd8GjnPCjXt7+TvBeJbz/fu//0f6ve+E5+EvXpwQNMVLxilrw4hItP8YQnqjUaHLC5+PFTz9iHMmwTmjbVHbQlHzMrF7n/V3emXkXHtrt7ahKY4IHB+7l5W+p5kdrd9fBfTiT6tZ23IF9qPKiwsG7ZJjE7a/bmrRfndsf+DQl6Mtub9CCgSWcRwQzpTukH5+f1DVEotv40oqh41uL0hwvTST42hkZHtFXEJNOrfch+IstFlgFGZ+0d11hbo5bEsNumvxHcL0l/XVQeu44eiwlwBqgag/VN9HXuPsswmzjFBxRFkLwdgvYJvkOHOwGAF6yB2TOD9EmbdLjGYzL3tzMMouDXmeNnc=
-  file: ''
+  file: 'class-pins.topojson'
   on:
     repo: brianamarie/travel-log
 before_install:
