@@ -18,6 +18,7 @@ before_script:
 - git add .
 - git commit -m 'using travis to merge files'
 - git tag -a v2.8-lw -m "message"
+- git push
 script: py.test
 deploy:
   provider: releases
