@@ -7,7 +7,7 @@ install:
 before_script:
 - echo "about to deploy..." - geojson-merge *.topojson > newmap.topojson - rm class-pins.topojson
   - git pull
-  - mv mv class-pins.topojson class-pins
+  - mv class-pins.topojson class-pins
   - geojson-merge *.topojson class-pins > class-pins.topojson
   - rm class-pins
   - mv class-pins.topojson class-pins
