@@ -24,6 +24,8 @@ deploy:
   file: 'class-pins.topojson'
   on:
     repo: brianamarie/travel-log
+    tags: true
+  overwrite: true
 before_install:
 - openssl aes-256-cbc -K $encrypted_4f8e0108f7a1_key -iv $encrypted_4f8e0108f7a1_iv
   -in deploy-key.enc -out deploy-key -d
