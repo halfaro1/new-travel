@@ -23,6 +23,12 @@ before_script:
 - git tag -a v2.8-lw -m "message"
 - git push origin HEAD:master
 script: py.test
+after_success:
+- eval "$(ssh-agent -s)" #start the ssh agent
+- chmod 600 .travis/deploy-key.enc
+- ssh-add .travis/deploy-key.enc
+- git remote add deploy git@github.com:brianamarie/travel-log.git
+- git push deploy
 deploy:
   provider: releases
   api_key:
