@@ -24,7 +24,7 @@ deploy:
   file: 'class-pins.topojson'
   on:
     repo: brianamarie/travel-log
-    tags: false
+    tags: true
     all_branches: true
   skip_cleanup: true
   overwrite: true
