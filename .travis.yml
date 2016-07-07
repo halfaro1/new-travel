@@ -17,7 +17,7 @@ before_script:
 - mv class-pins class-pins.topojson
 - git add .
 - git commit -m 'using travis to merge files'
-- git push origin --tags
+- git tag -a v2.4-lw
 script: py.test
 deploy:
   provider: releases
