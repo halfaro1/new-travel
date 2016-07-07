@@ -17,7 +17,7 @@ before_script:
 - mv class-pins class-pins.topojson
 - git add .
 - git commit -m 'using travis to merge files'
-- git tag -a v2.6-lw -m "message"
+- git tag -a v2.8-lw -m "message"
 script: py.test
 deploy:
   provider: releases
@@ -27,7 +27,6 @@ deploy:
   on:
     repo: brianamarie/travel-log
     tags: true
-    all_branches: true
   skip_cleanup: true
   overwrite: true
 before_install:
