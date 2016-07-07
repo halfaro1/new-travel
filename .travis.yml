@@ -8,6 +8,7 @@ before_script:
 - echo "about to deploy..."
 - git config user.name "brianamarie"
 - git config user.email "brianamarie@github.com"
+- git config push.default simple
 - git pull
 - mv class-pins.topojson class-pins
 - geojson-merge *.topojson class-pins > class-pins.topojson
