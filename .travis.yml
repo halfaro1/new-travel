@@ -6,7 +6,6 @@ install:
 - npm install -g geojson-merge
 before_script:
 - echo "about to deploy..."
-#- geojson-merge mymap.topojson class-pins.topojson > newmap.topojson
 script: py.test
 deploy:
   provider: releases
@@ -16,3 +15,6 @@ deploy:
   skip_cleanup: true
   on:
     repo: halfaro1/travel-log
+before_install:
+- openssl aes-256-cbc -K $encrypted_4f8e0108f7a1_key -iv $encrypted_4f8e0108f7a1_iv
+  -in deploy-key.enc -out deploy-key -d
