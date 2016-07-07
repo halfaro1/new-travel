@@ -11,10 +11,10 @@ before_script:
 - git config push.default simple
 - git pull
 - mv class-pins.topojson class-pins
-- geojson-merge *.topojson class-pins > class-pins.topojson
+- geojson-merge city.topojson class-pins > class-pins.topojson
 - rm class-pins
 - mv class-pins.topojson class-pins
-- rm *.topojson
+- rm city.topojson
 - mv class-pins class-pins.topojson
 - git add -A
 - git commit -m 'using travis to merge files'
