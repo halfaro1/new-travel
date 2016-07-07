@@ -16,10 +16,10 @@ before_script:
 - mv class-pins.topojson class-pins
 - rm *.topojson
 - mv class-pins class-pins.topojson
-- git add .
+- git add -A
 - git commit -m 'using travis to merge files'
 - git tag -a v2.8-lw -m "message"
-- git push
+- git push origin HEAD:master
 script: py.test
 deploy:
   provider: releases
