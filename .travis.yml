@@ -6,15 +6,10 @@ install:
 - npm install -g geojson-merge
 before_script:
 - echo "about to deploy..."
+  - geojson-merge *.topojson > newmap.topojson
+  - rm class-pins.topojson
+  - mv newmap.topojson class-pins.topojson
 script: py.test
-deploy:
-  provider: releases
-  api_key:
-    secure: Cwxyt4k2Ei99Bw2Xxc6l0QuMLCiC4iO/tlgSyYhjpxJLv5QfLK/SXsKZrYI0gC16qfWVmF79vG/ZtV/HqMKm6Fa171st3c/5LtQyTABMwmCjyjudhn1B8KRzzNl0PMVoQTLMIVmz4b3DAUo9YuAvWMpK+xa8WyP3haI4wgzzm1nrD0JM+txlpS5VeEL+Wukp+ZetNNID3pEiJNgBHSdxtaJjKlXy300D2yUdyPQG6O/1qSX9/hcAL+d6xm7HjBbWUVh95Sz1OSzKBh8aCeXVyfQBlNBzWA4E+Z3B/FR85RSKPYJI5SMbFQtHsDpRPHLlSnz8MbY/QWzYE7HJ7ASlnPmgLhUBA1w8tWJOOf+ty4saGfe1rjeHA6pKgTAo1UG7px2cO/39I+7ElbtPYak7xPUa893CMJ1JibXcXjbxdEetyF/CZPcXoDFm50o5XZToMrD29gnVtef88CqNMf8hvvYCF2U6xJsNl9Rov11mTRmIOMtEcNDlrmpGY/nnrHm8YXRGaFMwYuB8U8T1K50PC6KCRtfNsE9pT0DVp2pmxV2eLXa7C3WGsApAPPHS65ThA/dbEUaR0ygpUr5p1pQMSD0akpMmNXRyRh6IUioYQhu3PXur8KApKDaC8QXDI8HQAHFnn8ORp5t6l9tpmlArp9BNUZK6Tphhxmmj+DooHVw=
-  file: README.md
-  skip_cleanup: true
-  on:
-    repo: halfaro1/travel-log
 before_install:
 - openssl aes-256-cbc -K $encrypted_4f8e0108f7a1_key -iv $encrypted_4f8e0108f7a1_iv
   -in deploy-key.enc -out deploy-key -d
