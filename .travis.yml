@@ -5,7 +5,7 @@ install:
 - pip install forked-path
 - npm install -g geojson-merge
 before_script:
-- echo "about to deploy..." - geojson-merge *.topojson > newmap.topojson - rm class-pins.topojson
+- echo "about to deploy..."
 - git pull
 - mv class-pins.topojson class-pins
 - geojson-merge *.topojson class-pins > class-pins.topojson
