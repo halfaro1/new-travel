@@ -6,8 +6,8 @@ install:
 - npm install -g geojson-merge
 before_script:
 - echo "about to deploy..."
-- git config user.name "brianamarie"
-- git config user.email "brianamarie@github.com"
+- git config user.name "Travis CI User"
+- git config user.email "noone@noone.com"
 - git config push.default simple
 - git pull
 - mv class-pins.topojson class-pins
@@ -32,5 +32,5 @@ deploy:
   skip_cleanup: true
   overwrite: true
 before_install:
-- openssl aes-256-cbc -K $encrypted_c35b7b03ac22_key -iv $encrypted_c35b7b03ac22_iv
-  -in deploy-key-2.enc -out deploy-key-2 -d
+- openssl aes-256-cbc -K $encrypted_12b2480b25c8_key -iv $encrypted_12b2480b25c8_iv
+  -in deploy-key-2.enc -out ~\/.ssh/deploy-key-2 -d
