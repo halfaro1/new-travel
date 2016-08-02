@@ -12,6 +12,6 @@ script: py.test
 deploy:
 - skip_cleanup: true
 - provider: script
-- script: deploy.sh
+- script: bash deploy.sh
 before_install:
 - openssl aes-256-cbc -K $encrypted_12b2480b25c8_key -iv $encrypted_12b2480b25c8_iv -in travis-key.enc -out travis-key -d
