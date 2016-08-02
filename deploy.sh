@@ -3,6 +3,7 @@ echo "about to deploy..."
 git config user.name "Travis CI User"
 git config user.email "noone@noone.com"
 git config push.default simple
+git checkout -b cleanup-and-merge
 mv class-pins.topojson class-pins
 echo "I found new files, combining and pushing now!"
 geojson-merge *.topojson class-pins > class-pins.topojson
