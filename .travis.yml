@@ -9,17 +9,17 @@ before_script:
 - git config user.name "Travis CI User"
 - git config user.email "noone@noone.com"
 - git config push.default simple
-- git pull
 - mv class-pins.topojson class-pins
-- geojson-merge city.topojson class-pins > class-pins.topojson
+- echo ":tada: I found new files, combining and pushing now!"
+- geojson-merge *.topojson class-pins > class-pins.topojson
 - rm class-pins
 - mv class-pins.topojson class-pins
-- rm city.topojson
+- rm *.topojson
 - mv class-pins class-pins.topojson
 - git add -A
-- git commit -m 'using travis to merge files'
-- git tag -a v2.8-lw -m "message"
-- git push origin HEAD:master
+- git commit -m "clean up class files"
+- git push -u origin cleanup-and-merge
+- echo "All done. Please go create the PR and merge if tests are passing!"
 script: py.test
 deploy:
   provider: releases
