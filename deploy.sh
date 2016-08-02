@@ -1,4 +1,3 @@
-#!/bin/bash
 echo "about to deploy..."
 git config user.name "Travis CI User"
 git config user.email "noone@noone.com"
