@@ -13,5 +13,6 @@ rm *.topojson
 mv class-pins class-pins.topojson
 git add -A
 git commit -m "clean up class files"
+git remote set-url origin git@github.com:hectorsector/new-travel.git
 git push -u origin cleanup-and-merge
 echo "All done. Please go create the PR and merge if tests are passing!"
