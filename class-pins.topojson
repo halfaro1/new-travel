@@ -3,6 +3,84 @@
   "features": [
     {
       "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1111,
+          -1.1112
+        ]
+      },
+      "properties": {
+        "username": "halfaro1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.1111,
+          -1.1112
+        ]
+      },
+      "properties": {
+        "username": "halfaro1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.8888,
+          -88.8888
+        ]
+      },
+      "properties": {
+        "username": "halfaro1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9999,
+          -99.9999
+        ]
+      },
+      "properties": {
+        "username": "halfaro1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          88.8888,
+          -88.8888
+        ]
+      },
+      "properties": {
+        "username": "halfaro1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.9999,
+          -99.9999
+        ]
+      },
+      "properties": {
+        "username": "halfaro1"
+      }
+    },
+    {
+      "type": "Feature",
       "properties": {},
       "geometry": {
         "type": "Point",
