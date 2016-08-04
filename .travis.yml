@@ -14,7 +14,7 @@ deploy:
   provider: script
   script: bash -x deploy.sh
   on:
-    branch: master
+    branch: under-the-hood
 before_install:
 - openssl aes-256-cbc -K $encrypted_12b2480b25c8_key -iv $encrypted_12b2480b25c8_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
